@@ -1,0 +1,26 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+.openzeppelin
+#Hardhat files
+cache
+artifacts
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Build
+dist
+docs
+
+deployments/localhost
+
+# OSX
+.DS_Store
