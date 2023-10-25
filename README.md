@@ -1,4 +1,4 @@
-[![GitHub Actions](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/cd.yaml/badge.svg)](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/cd.yaml) [![GitHub Actions](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/ci.yml/badge.svg)](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/ci.yml)
+[![GitHub Actions](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/cd.yaml/badge.svg)](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/cd.yaml) [![GitHub Actions](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/ci.yaml/badge.svg)](https://github.com/VenusProtocol/solidity-utilities/actions/workflows/ci.yaml)
 
 # Development
 
