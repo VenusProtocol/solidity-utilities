@@ -1,3 +1,15 @@
+## [1.1.0-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v1.0.1...v1.1.0-dev.1) (2023-11-07)
+
+
+### Features
+
+* add math helpers and constants ([f1b2596](https://github.com/VenusProtocol/solidity-utilities/commit/f1b2596b8f508be48cce1bf5f4643dbe8a91467a))
+
+
+### Bug Fixes
+
+* resolve comments ([7f93845](https://github.com/VenusProtocol/solidity-utilities/commit/7f938459cad0743da83718dcb48f4678bed52c77))
+
 ## [1.0.1](https://github.com/VenusProtocol/solidity-utilities/compare/v1.0.0...v1.0.1) (2023-10-25)
 
 
