@@ -1,3 +1,11 @@
+## [1.1.1-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v1.1.0...v1.1.1-dev.1) (2023-12-07)
+
+
+### Bug Fixes
+
+* added seconds per year ([0ac205b](https://github.com/VenusProtocol/solidity-utilities/commit/0ac205b92d2a84b9832c764f21bab09bc2a8cda8))
+* lint ([212e959](https://github.com/VenusProtocol/solidity-utilities/commit/212e9590568ba433a2d5b7b40445374143f20561))
+
 ## [1.1.0](https://github.com/VenusProtocol/solidity-utilities/compare/v1.0.1...v1.1.0) (2023-11-07)
 
 
