@@ -24,8 +24,12 @@ contract TimeManagerV5 {
      */
     constructor(bool timeBased_, uint256 blocksPerYear_) public {
         if (!timeBased_ && blocksPerYear_ == 0) {
-            revert("Invalid Blocks Per year");
+            revert("Invalid blocks per year");
         }
+        if (timeBased_ && blocksPerYear_ != 0) {
+            revert("Invalid time based");
+        }
+
         isTimeBased = timeBased_;
         blocksOrSecondsPerYear = timeBased_ ? SECONDS_PER_YEAR : blocksPerYear_;
         _getCurrentSlot = timeBased_ ? _getBlockTimestamp : _getBlockNumber;
@@ -33,7 +37,6 @@ contract TimeManagerV5 {
 
     /**
      * @dev Function to simply retrieve block number or block timestamp
-     *  This exists mainly for inheriting test contracts to stub this result.
      * @return Current block number or block timestamp
      */
     function getBlockNumberOrTimestamp() public view returns (uint256) {

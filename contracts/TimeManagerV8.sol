@@ -3,7 +3,7 @@ pragma solidity 0.8.13;
 
 import { SECONDS_PER_YEAR } from "./constants.sol";
 
-abstract contract TimeManagerV8 {
+abstract contract TimeManager {
     /// @custom:oz-upgrades-unsafe-allow state-variable-immutable
     uint256 public immutable blocksOrSecondsPerYear;
 
@@ -13,8 +13,11 @@ abstract contract TimeManagerV8 {
     /// @custom:oz-upgrades-unsafe-allow state-variable-immutable
     function() view returns (uint256) private immutable _getCurrentSlot;
 
-    /// @notice Thrown on invaid arguments
+    /// @notice Thrown when blocks per year is invalid
     error InvalidBlocksPerYear();
+
+    /// @notice Thrown when time based but blocks per year is provided
+    error InvalidTimeBased();
 
     /**
      * @param timeBased_ A boolean indicating whether the contract is based on time or block.
@@ -28,6 +31,10 @@ abstract contract TimeManagerV8 {
             revert InvalidBlocksPerYear();
         }
 
+        if (timeBased_ && blocksPerYear_ != 0) {
+            revert InvalidTimeBased();
+        }
+
         isTimeBased = timeBased_;
         blocksOrSecondsPerYear = timeBased_ ? SECONDS_PER_YEAR : blocksPerYear_;
         _getCurrentSlot = timeBased_ ? _getBlockTimestamp : _getBlockNumber;
@@ -35,7 +42,6 @@ abstract contract TimeManagerV8 {
 
     /**
      * @dev Function to simply retrieve block number or block timestamp
-     *  This exists mainly for inheriting test contracts to stub this result.
      * @return Current block number or block timestamp
      */
     function getBlockNumberOrTimestamp() public view virtual returns (uint256) {
