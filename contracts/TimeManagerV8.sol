@@ -3,7 +3,7 @@ pragma solidity 0.8.13;
 
 import { SECONDS_PER_YEAR } from "./constants.sol";
 
-abstract contract TimeManager {
+abstract contract TimeManagerV8 {
     /// @custom:oz-upgrades-unsafe-allow state-variable-immutable
     uint256 public immutable blocksOrSecondsPerYear;
 
