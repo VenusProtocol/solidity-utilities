@@ -18,7 +18,7 @@ contract TimeManagerV5 {
     function() view returns (uint256) private _getCurrentSlot;
 
     /**
-     * @param timeBased_ A boolean indicating whether the contract is based on time or block.
+     * @param timeBased_ A boolean indicating whether the contract is based on time or block
      * If timeBased is true than blocksPerYear_ param is ignored as blocksOrSecondsPerYear is set to SECONDS_PER_YEAR
      * @param blocksPerYear_ The number of blocks per year
      */
@@ -27,7 +27,7 @@ contract TimeManagerV5 {
             revert("Invalid blocks per year");
         }
         if (timeBased_ && blocksPerYear_ != 0) {
-            revert("Invalid time based");
+            revert("Invalid time based configuration");
         }
 
         isTimeBased = timeBased_;
@@ -44,7 +44,7 @@ contract TimeManagerV5 {
     }
 
     /**
-     * @notice Returns the current timestamp in seconds
+     * @dev Returns the current timestamp in seconds
      * @return The current timestamp
      */
     function _getBlockTimestamp() private view returns (uint256) {
@@ -52,7 +52,7 @@ contract TimeManagerV5 {
     }
 
     /**
-     * @notice Returns the current block number
+     * @dev Returns the current block number
      * @return The current block number
      */
     function _getBlockNumber() private view returns (uint256) {

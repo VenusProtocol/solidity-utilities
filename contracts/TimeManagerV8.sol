@@ -17,13 +17,14 @@ abstract contract TimeManagerV8 {
     error InvalidBlocksPerYear();
 
     /// @notice Thrown when time based but blocks per year is provided
-    error InvalidTimeBased();
+    error InvalidTimeBasedConfiguration();
 
     /**
-     * @param timeBased_ A boolean indicating whether the contract is based on time or block.
+     * @param timeBased_ A boolean indicating whether the contract is based on time or block
      * If timeBased is true than blocksPerYear_ param is ignored as blocksOrSecondsPerYear is set to SECONDS_PER_YEAR
      * @param blocksPerYear_ The number of blocks per year
-     * @custom:error InvalidBlocksPerYear is thrown if blocksPerYear entered is zero
+     * @custom:error InvalidBlocksPerYear is thrown if blocksPerYear entered is zero and timeBased is false
+     * @custom:error InvalidTimeBasedConfiguration is thrown if blocksPerYear entered is non zero and timeBased is true
      * @custom:oz-upgrades-unsafe-allow constructor
      */
     constructor(bool timeBased_, uint256 blocksPerYear_) {
@@ -32,7 +33,7 @@ abstract contract TimeManagerV8 {
         }
 
         if (timeBased_ && blocksPerYear_ != 0) {
-            revert InvalidTimeBased();
+            revert InvalidTimeBasedConfiguration();
         }
 
         isTimeBased = timeBased_;
@@ -49,7 +50,7 @@ abstract contract TimeManagerV8 {
     }
 
     /**
-     * @notice Returns the current timestamp in seconds
+     * @dev Returns the current timestamp in seconds
      * @return The current timestamp
      */
     function _getBlockTimestamp() private view returns (uint256) {
@@ -57,7 +58,7 @@ abstract contract TimeManagerV8 {
     }
 
     /**
-     * @notice Returns the current block number
+     * @dev Returns the current block number
      * @return The current block number
      */
     function _getBlockNumber() private view returns (uint256) {
