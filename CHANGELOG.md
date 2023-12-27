@@ -1,3 +1,20 @@
+## [1.2.0](https://github.com/VenusProtocol/solidity-utilities/compare/v1.1.0...v1.2.0) (2023-12-27)
+
+
+### Features
+
+* add TimeManagerV5 and TimeManagerV8 ([29db1cd](https://github.com/VenusProtocol/solidity-utilities/commit/29db1cdc8455a04736fcc2fc5e5cf6221aa5050d))
+* set compiler config similar to other packages ([8cc9b56](https://github.com/VenusProtocol/solidity-utilities/commit/8cc9b560e38b0692023b536be0ae3cbb3f228aa2))
+
+
+### Bug Fixes
+
+* added seconds per year ([0ac205b](https://github.com/VenusProtocol/solidity-utilities/commit/0ac205b92d2a84b9832c764f21bab09bc2a8cda8))
+* change contract name ([066450f](https://github.com/VenusProtocol/solidity-utilities/commit/066450f79d1c0872ed9baa39f55ebb2952ebb33f))
+* comments and revert condition ([d037cf3](https://github.com/VenusProtocol/solidity-utilities/commit/d037cf33114552e730aee83e209bd4c937d73703))
+* lint ([212e959](https://github.com/VenusProtocol/solidity-utilities/commit/212e9590568ba433a2d5b7b40445374143f20561))
+* netscape ([05d1962](https://github.com/VenusProtocol/solidity-utilities/commit/05d19627e649cc456e15dcf2da9671d19ccfe4fa))
+
 ## [1.2.0-dev.2](https://github.com/VenusProtocol/solidity-utilities/compare/v1.2.0-dev.1...v1.2.0-dev.2) (2023-12-27)
 
 
