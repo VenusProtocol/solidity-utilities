@@ -36,9 +36,7 @@ const config: HardhatUserConfig = {
         settings: {
           optimizer: {
             enabled: true,
-            details: {
-              yul: !process.env.CI,
-            },
+            runs: 200,
           },
           outputSelection: {
             "*": {
@@ -52,9 +50,7 @@ const config: HardhatUserConfig = {
         settings: {
           optimizer: {
             enabled: true,
-            details: {
-              yul: !process.env.CI,
-            },
+            runs: 200,
           },
           outputSelection: {
             "*": {
