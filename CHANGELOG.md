@@ -1,3 +1,10 @@
+## [1.2.0-dev.2](https://github.com/VenusProtocol/solidity-utilities/compare/v1.2.0-dev.1...v1.2.0-dev.2) (2023-12-27)
+
+
+### Features
+
+* set compiler config similar to other packages ([8cc9b56](https://github.com/VenusProtocol/solidity-utilities/commit/8cc9b560e38b0692023b536be0ae3cbb3f228aa2))
+
 ## [1.2.0-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v1.1.1-dev.1...v1.2.0-dev.1) (2023-12-21)
 
 
