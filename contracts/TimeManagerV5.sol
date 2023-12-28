@@ -11,12 +11,15 @@ contract TimeManagerV5 {
     /// @dev Sets true when block timestamp is used
     bool public isTimeBased;
 
+    /// @dev Sets true when contract is initialized
+    bool private isInitialized;
+
     /**
      * @dev This empty reserved space is put in place to allow future versions to add new
      * variables without shifting down storage in the inheritance chain
      * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
      */
-    uint256[47] private __gap;
+    uint256[46] private __gap;
 
     /**
      * @dev Retrieves the current slot
@@ -25,11 +28,14 @@ contract TimeManagerV5 {
     function() view returns (uint256) private _getCurrentSlot;
 
     /**
+     * @dev Initializes the contract to use either blocks or seconds
      * @param timeBased_ A boolean indicating whether the contract is based on time or block
      * If timeBased is true than blocksPerYear_ param is ignored as blocksOrSecondsPerYear is set to SECONDS_PER_YEAR
      * @param blocksPerYear_ The number of blocks per year
      */
-    constructor(bool timeBased_, uint256 blocksPerYear_) public {
+    function _initializeTimeManager(bool timeBased_, uint256 blocksPerYear_) internal {
+        if (isInitialized) revert("Already initialized TimeManager");
+
         if (!timeBased_ && blocksPerYear_ == 0) {
             revert("Invalid blocks per year");
         }
@@ -40,6 +46,7 @@ contract TimeManagerV5 {
         isTimeBased = timeBased_;
         blocksOrSecondsPerYear = timeBased_ ? SECONDS_PER_YEAR : blocksPerYear_;
         _getCurrentSlot = timeBased_ ? _getBlockTimestamp : _getBlockNumber;
+        isInitialized = true;
     }
 
     /**
