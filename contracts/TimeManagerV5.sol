@@ -28,6 +28,14 @@ contract TimeManagerV5 {
     function() view returns (uint256) private _getCurrentSlot;
 
     /**
+     * @dev Function to simply retrieve block number or block timestamp
+     * @return Current block number or block timestamp
+     */
+    function getBlockNumberOrTimestamp() public view returns (uint256) {
+        return _getCurrentSlot();
+    }
+
+    /**
      * @dev Initializes the contract to use either blocks or seconds
      * @param timeBased_ A boolean indicating whether the contract is based on time or block
      * If timeBased is true than blocksPerYear_ param is ignored as blocksOrSecondsPerYear is set to SECONDS_PER_YEAR
@@ -47,14 +55,6 @@ contract TimeManagerV5 {
         blocksOrSecondsPerYear = timeBased_ ? SECONDS_PER_YEAR : blocksPerYear_;
         _getCurrentSlot = timeBased_ ? _getBlockTimestamp : _getBlockNumber;
         isInitialized = true;
-    }
-
-    /**
-     * @dev Function to simply retrieve block number or block timestamp
-     * @return Current block number or block timestamp
-     */
-    function getBlockNumberOrTimestamp() public view returns (uint256) {
-        return _getCurrentSlot();
     }
 
     /**
