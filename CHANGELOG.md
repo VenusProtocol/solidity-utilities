@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/VenusProtocol/solidity-utilities/compare/v1.2.0...v1.3.0) (2024-01-09)
+
+
+### Features
+
+* add function to check for non-zero values ([8e5787b](https://github.com/VenusProtocol/solidity-utilities/commit/8e5787bfe8af37077b6f6a68732a33d0551eac79))
+
 ## [1.3.0-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v1.2.0...v1.3.0-dev.1) (2024-01-09)
 
 
