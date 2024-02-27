@@ -4,21 +4,24 @@ pragma solidity 0.8.13;
 import { SECONDS_PER_YEAR } from "./constants.sol";
 
 abstract contract TimeManagerV8 {
+    /// @notice Stores blocksPerYear if isTimeBased is true else secondsPerYear is stored
     /// @custom:oz-upgrades-unsafe-allow state-variable-immutable
     uint256 public immutable blocksOrSecondsPerYear;
 
+    /// @notice Acknowledges if a contract is time based or not
     /// @custom:oz-upgrades-unsafe-allow state-variable-immutable
     bool public immutable isTimeBased;
+
+    /// @notice Stores the current block timestamp or block number depending on isTimeBased
+    /// @custom:oz-upgrades-unsafe-allow state-variable-immutable
+    function() view returns (uint256) private immutable _getCurrentSlot;
 
     /**
      * @dev This empty reserved space is put in place to allow future versions to add new
      * variables without shifting down storage in the inheritance chain
      * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
      */
-    uint256[48] private __gap;
-
-    /// @custom:oz-upgrades-unsafe-allow state-variable-immutable
-    function() view returns (uint256) private immutable _getCurrentSlot;
+    uint256[50] private __gap;
 
     /// @notice Thrown when blocks per year is invalid
     error InvalidBlocksPerYear();
