@@ -1,3 +1,11 @@
+## [1.3.1-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v1.3.0...v1.3.1-dev.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* revert change for gap variable ([1c452e2](https://github.com/VenusProtocol/solidity-utilities/commit/1c452e2a14833716640458716bec6b1c6bf67ecf))
+* Scope 1. Misc. TimeManagerV8 ([0a957e5](https://github.com/VenusProtocol/solidity-utilities/commit/0a957e59733ca79b3cf547974a39a3b435c87b0a))
+
 ## [1.3.0](https://github.com/VenusProtocol/solidity-utilities/compare/v1.2.0...v1.3.0) (2024-01-09)
 
 
