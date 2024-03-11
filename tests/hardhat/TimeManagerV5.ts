@@ -8,8 +8,9 @@ describe("TimeManagerV5: tests", async () => {
   describe("For block number", async () => {
     const blocksPerYear = 10512000;
     beforeEach(async () => {
-      const timeManagerV5 = await ethers.getContractFactory("TimeManagerV5");
-      timeManager = await timeManagerV5.deploy(false, blocksPerYear);
+      const timeManagerV5 = await ethers.getContractFactory("ScenarioTimeManagerV5");
+      timeManager = await timeManagerV5.deploy();
+      await timeManager.initializeTimeManager(false, blocksPerYear);
     });
 
     it("Retrieves block timestamp", async () => {
@@ -20,8 +21,9 @@ describe("TimeManagerV5: tests", async () => {
   });
   describe("For block timestamp", async () => {
     beforeEach(async () => {
-      const timeManagerV5 = await ethers.getContractFactory("TimeManagerV5");
-      timeManager = await timeManagerV5.deploy(true, 0);
+      const timeManagerV5 = await ethers.getContractFactory("ScenarioTimeManagerV5");
+      timeManager = await timeManagerV5.deploy();
+      await timeManager.initializeTimeManager(true, 0);
     });
 
     it("Retrieves block timestamp", async () => {
