@@ -1,3 +1,20 @@
+## [2.0.0](https://github.com/VenusProtocol/solidity-utilities/compare/v1.3.0...v2.0.0) (2024-04-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate to 0.8.25
+
+### Features
+
+* migrate to 0.8.25 ([88b12ce](https://github.com/VenusProtocol/solidity-utilities/commit/88b12ce1f501b650eeacb8664d0fc744f1c3b61b))
+
+
+### Bug Fixes
+
+* revert change for gap variable ([1c452e2](https://github.com/VenusProtocol/solidity-utilities/commit/1c452e2a14833716640458716bec6b1c6bf67ecf))
+* Scope 1. Misc. TimeManagerV8 ([0a957e5](https://github.com/VenusProtocol/solidity-utilities/commit/0a957e59733ca79b3cf547974a39a3b435c87b0a))
+
 ## [2.0.0-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v1.3.1-dev.1...v2.0.0-dev.1) (2024-04-10)
 
 
