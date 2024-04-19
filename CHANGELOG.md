@@ -1,3 +1,12 @@
+## [2.0.1-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.0...v2.0.1-dev.1) (2024-04-19)
+
+
+### Bug Fixes
+
+* fixed gap ([7d24a65](https://github.com/VenusProtocol/solidity-utilities/commit/7d24a656b2477d29021d6748d839cd949e9bf0c3))
+* fixed tests ([c8713a4](https://github.com/VenusProtocol/solidity-utilities/commit/c8713a4326271c1a1d3bc7da28734b1f6f023aad))
+* fixed time manager ([4652a33](https://github.com/VenusProtocol/solidity-utilities/commit/4652a3347ab2a9ccd7c97bf23610d06da42b2d8f))
+
 ## [2.0.0](https://github.com/VenusProtocol/solidity-utilities/compare/v1.3.0...v2.0.0) (2024-04-10)
 
 
