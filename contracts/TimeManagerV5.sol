@@ -14,11 +14,8 @@ contract TimeManagerV5 {
     /// @dev Sets true when contract is initialized
     bool private isInitialized;
 
-    /**
-     * @dev Retrieves the current slot
-     * @return Current slot
-     */
-    function() view returns (uint256) private _getCurrentSlot;
+    /// @notice Deprecated slot for _getCurrentSlot function pointer
+    bytes32 private __deprecatedSlot1;
 
     /**
      * @dev This empty reserved space is put in place to allow future versions to add new
@@ -32,7 +29,7 @@ contract TimeManagerV5 {
      * @return Current block number or block timestamp
      */
     function getBlockNumberOrTimestamp() public view returns (uint256) {
-        return _getCurrentSlot();
+        return isTimeBased ? _getBlockTimestamp() : _getBlockNumber();
     }
 
     /**
@@ -53,7 +50,6 @@ contract TimeManagerV5 {
 
         isTimeBased = timeBased_;
         blocksOrSecondsPerYear = timeBased_ ? SECONDS_PER_YEAR : blocksPerYear_;
-        _getCurrentSlot = timeBased_ ? _getBlockTimestamp : _getBlockNumber;
         isInitialized = true;
     }
 
