@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.1...v2.0.2) (2024-05-14)
+
+
+### Bug Fixes
+
+* TimeManagerV5 remove function pointer and add conditional logic ([d3b0ebf](https://github.com/VenusProtocol/solidity-utilities/commit/d3b0ebf3b175b3e14c6783c8c659d09f47b0cf7b))
+
 ## [2.0.2-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.1...v2.0.2-dev.1) (2024-05-13)
 
 
