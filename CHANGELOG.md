@@ -1,3 +1,10 @@
+## [2.0.3-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.2...v2.0.3-dev.1) (2024-05-16)
+
+
+### Bug Fixes
+
+* TimeManagerV5 deprecated storage slot size ([a1c1832](https://github.com/VenusProtocol/solidity-utilities/commit/a1c18320e910a647f99353aa330007a14da492fd))
+
 ## [2.0.2](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.1...v2.0.2) (2024-05-14)
 
 
