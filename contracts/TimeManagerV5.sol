@@ -15,7 +15,7 @@ contract TimeManagerV5 {
     bool private isInitialized;
 
     /// @notice Deprecated slot for _getCurrentSlot function pointer
-    bytes32 private __deprecatedSlot1;
+    bytes8 private __deprecatedSlot1;
 
     /**
      * @dev This empty reserved space is put in place to allow future versions to add new
