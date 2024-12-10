@@ -41,7 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@defi-wonderland/smock": "^2.4.0",
+    "@defi-wonderland/smock": "2.3.5",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.4",
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
@@ -66,7 +66,7 @@
     "eslint-plugin-prettier": "3.4.1",
     "eslint-plugin-promise": "^5.2.0",
     "ethers": "^5.7.0",
-    "hardhat": "^2.22.15",
+    "hardhat": "2.19.4",
     "hardhat-deploy": "^0.11.26",
     "hardhat-deploy-ethers": "^0.3.0-beta.13",
     "hardhat-gas-reporter": "^1.0.8",
