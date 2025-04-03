@@ -58,8 +58,12 @@ contract TimeManagerV5 {
      * @param blocksPerYear_ The number of blocks per year
      */
     function _setBlocksPerYear(uint256 blocksPerYear_) internal {
-        if (blocksPerYear_ == 0 && !isTimeBased) {
-            revert("Invalid blocks per year");
+        if (blocksPerYear_ == 0) {
+            revert("Blocks per year cannot be zero");
+        }
+
+        if (isTimeBased) {
+            revert("Cannot update for time based network");
         }
         blocksOrSecondsPerYear = blocksPerYear_;
     }
