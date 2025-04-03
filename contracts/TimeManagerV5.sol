@@ -58,7 +58,7 @@ contract TimeManagerV5 {
      * @param blocksPerYear_ The number of blocks per year
      */
     function _setBlocksPerYear(uint256 blocksPerYear_) internal {
-        if (blocksPerYear_ == 0) {
+        if (blocksPerYear_ == 0 && !isTimeBased) {
             revert("Invalid blocks per year");
         }
         blocksOrSecondsPerYear = blocksPerYear_;
