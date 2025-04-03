@@ -24,8 +24,8 @@ contract TimeManagerV5 {
      */
     uint256[48] private __gap;
 
-    /// @notice Emitted once Time Manager is initialized with timebased and blocksOrSeconds
-    event InitializeTimeManager(bool indexed timebased, uint256 indexed blocksOrSeconds);
+    /// @notice Emitted once Time Manager is initialized with timebased and blocksOrSecondsPerYear
+    event InitializeTimeManager(bool indexed timebased, uint256 indexed blocksOrSecondsPerYear);
 
     /// @notice Emitted When blocks per year is updated for block based network
     event SetBlocksPerYear(uint256 indexed prevBlocksPeryear, uint256 indexed newBlocksPerYear);
