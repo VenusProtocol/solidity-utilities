@@ -24,6 +24,12 @@ contract TimeManagerV5 {
      */
     uint256[48] private __gap;
 
+    /// @notice Emitted once Time Manager is initialized with timebased and blocksOrSeconds
+    event InitializeTimeManager(bool indexed timebased, uint256 indexed blocksOrSeconds);
+
+    /// @notice Emitted When blocks per year is updated for block based network
+    event SetBlocksPerYear(uint256 indexed prevBlocksPeryear, uint256 indexed newBlocksPerYear);
+
     /**
      * @dev Function to simply retrieve block number or block timestamp
      * @return Current block number or block timestamp
@@ -48,13 +54,14 @@ contract TimeManagerV5 {
             revert("Invalid time based configuration");
         }
 
+        isInitialized = true;
         isTimeBased = timeBased_;
         blocksOrSecondsPerYear = timeBased_ ? SECONDS_PER_YEAR : blocksPerYear_;
-        isInitialized = true;
+        emit InitializeTimeManager(isTimeBased, blocksOrSecondsPerYear);
     }
 
     /**
-     * @dev Set blocks per year
+     * @dev Set blocks per year for block based network
      * @param blocksPerYear_ The number of blocks per year
      */
     function _setBlocksPerYear(uint256 blocksPerYear_) internal {
@@ -65,6 +72,7 @@ contract TimeManagerV5 {
         if (isTimeBased) {
             revert("Cannot update for time based network");
         }
+        emit SetBlocksPerYear(blocksOrSecondsPerYear, blocksPerYear_);
         blocksOrSecondsPerYear = blocksPerYear_;
     }
 
