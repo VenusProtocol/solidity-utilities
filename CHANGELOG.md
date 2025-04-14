@@ -1,3 +1,10 @@
+## [2.1.0-dev.2](https://github.com/VenusProtocol/solidity-utilities/compare/v2.1.0-dev.1...v2.1.0-dev.2) (2025-04-14)
+
+
+### Features
+
+* added comments as suggested by Fairyproof ([1ffee1c](https://github.com/VenusProtocol/solidity-utilities/commit/1ffee1c8c4b2b3919f5a45324f1a900fd0d2eae2))
+
 ## [2.1.0-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.3...v2.1.0-dev.1) (2025-04-03)
 
 
