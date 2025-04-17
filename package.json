@@ -1,6 +1,6 @@
 {
   "name": "@venusprotocol/solidity-utilities",
-  "version": "2.1.0-dev.2",
+  "version": "2.1.0",
   "description": "Solidity code used by other Venus projects",
   "files": [
     "artifacts",
