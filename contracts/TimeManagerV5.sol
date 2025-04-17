@@ -1,6 +1,11 @@
 // SPDX-License-Identifier: BSD-3-Clause
 pragma solidity 0.5.16;
 
+/**
+ * @title TimeManagerV5
+ * @dev THIS CONTRACT IS NOT MEANT TO BE DEPLOYED DIRECTLY.
+ * It should only be used through inheritance by other contracts.
+ */
 contract TimeManagerV5 {
     /// @dev The approximate number of seconds per year
     uint256 public constant SECONDS_PER_YEAR = 31_536_000;
@@ -21,8 +26,25 @@ contract TimeManagerV5 {
      * @dev This empty reserved space is put in place to allow future versions to add new
      * variables without shifting down storage in the inheritance chain
      * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
+     *
+     * Storage layout explanation:
+     * - blocksOrSecondsPerYear (uint256): Occupies slot 0 (full 32 bytes)
+     * - Slot 1 has the following variables packed from right to left (low to high):
+     *   - isTimeBased (bool): 1 byte at lowest position
+     *   - isInitialized (bool): 1 byte
+     *   - __deprecatedSlot1 (bytes8): 8 bytes
+     *
+     * Total used slots: 2
+     * Therefore __gap size is 48 (50 - 2 = 48)
      */
+
     uint256[48] private __gap;
+
+    /// @notice Emitted once Time Manager is initialized with timebased and blocksOrSecondsPerYear
+    event InitializeTimeManager(bool indexed timebased, uint256 indexed blocksOrSecondsPerYear);
+
+    /// @notice Emitted When blocks per year is updated for block based network
+    event SetBlocksPerYear(uint256 indexed prevBlocksPerYear, uint256 indexed newBlocksPerYear);
 
     /**
      * @dev Function to simply retrieve block number or block timestamp
@@ -48,9 +70,26 @@ contract TimeManagerV5 {
             revert("Invalid time based configuration");
         }
 
+        isInitialized = true;
         isTimeBased = timeBased_;
         blocksOrSecondsPerYear = timeBased_ ? SECONDS_PER_YEAR : blocksPerYear_;
-        isInitialized = true;
+        emit InitializeTimeManager(isTimeBased, blocksOrSecondsPerYear);
+    }
+
+    /**
+     * @dev Set blocks per year for block based network
+     * @param blocksPerYear_ The number of blocks per year
+     */
+    function _setBlocksPerYear(uint256 blocksPerYear_) internal {
+        if (blocksPerYear_ == 0) {
+            revert("Blocks per year cannot be zero");
+        }
+
+        if (isTimeBased) {
+            revert("Cannot update for time based network");
+        }
+        emit SetBlocksPerYear(blocksOrSecondsPerYear, blocksPerYear_);
+        blocksOrSecondsPerYear = blocksPerYear_;
     }
 
     /**
