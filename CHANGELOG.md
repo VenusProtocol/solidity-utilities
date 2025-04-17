@@ -1,3 +1,18 @@
+## [2.1.0](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.3...v2.1.0) (2025-04-17)
+
+
+### Features
+
+* add missing events ([729c124](https://github.com/VenusProtocol/solidity-utilities/commit/729c124a5df180487536339a82b1fb5ad198dc5f))
+* added a setter for blocks per year ([623f690](https://github.com/VenusProtocol/solidity-utilities/commit/623f690d7d3da0da396f09e35773c657d53d3e00))
+* added comments as suggested by Fairyproof ([1ffee1c](https://github.com/VenusProtocol/solidity-utilities/commit/1ffee1c8c4b2b3919f5a45324f1a900fd0d2eae2))
+* check for valid  timeBased ([d9c3592](https://github.com/VenusProtocol/solidity-utilities/commit/d9c3592b2acb95725533c5a181610098f48e331a))
+
+
+### Bug Fixes
+
+* update var name ([7bfd8c9](https://github.com/VenusProtocol/solidity-utilities/commit/7bfd8c9e7e3db4b4deb0333658e985a2815888ed))
+
 ## [2.1.0-dev.2](https://github.com/VenusProtocol/solidity-utilities/compare/v2.1.0-dev.1...v2.1.0-dev.2) (2025-04-14)
 
 
