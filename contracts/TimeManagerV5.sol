@@ -44,7 +44,7 @@ contract TimeManagerV5 {
     event InitializeTimeManager(bool indexed timebased, uint256 indexed blocksOrSecondsPerYear);
 
     /// @notice Emitted When blocks per year is updated for block based network
-    event SetBlocksPerYear(uint256 indexed prevBlocksPeryear, uint256 indexed newBlocksPerYear);
+    event SetBlocksPerYear(uint256 indexed prevBlocksPerYear, uint256 indexed newBlocksPerYear);
 
     /**
      * @dev Function to simply retrieve block number or block timestamp
