@@ -1,6 +1,6 @@
 {
   "name": "@venusprotocol/solidity-utilities",
-  "version": "2.1.0",
+  "version": "2.1.1-dev.1",
   "description": "Solidity code used by other Venus projects",
   "files": [
     "artifacts",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/VenusProtocol/solidity-utilities#readme",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
@@ -48,7 +48,6 @@
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^9.0.1",
     "@trivago/prettier-plugin-sort-imports": "3.4.0",
     "@typechain/ethers-v5": "^7.2.0",
     "@typechain/hardhat": "^2.3.1",
@@ -58,6 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "chai": "^4.3.6",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
     "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "8.5.0",
@@ -74,7 +74,7 @@
     "module-alias": "^2.2.2",
     "prettier": "2.7.1",
     "prettier-plugin-solidity": "1.1.3",
-    "semantic-release": "^19.0.3",
+    "semantic-release": "^25.0.9",
     "solhint": "^3.3.7",
     "solidity-coverage": "^0.8.4",
     "solidity-docgen": "^0.6.0-beta.29",
@@ -85,7 +85,16 @@
   "resolutions": {
     "scrypt.js": "https://registry.npmjs.org/@compound-finance/ethereumjs-wallet/-/ethereumjs-wallet-0.6.3.tgz",
     "ganache-core": "github:compound-finance/ganache-core.git#jflatow/unbreak-fork",
-    "solidity-parser-antlr": "https://github.com/solidity-parser/parser#0.8.2"
+    "solidity-parser-antlr": "https://github.com/solidity-parser/parser#0.8.2",
+    "elliptic@6.5.4": "6.6.1",
+    "@babel/traverse@7.17.3": "7.26.4",
+    "adm-zip@^0.4.16": "0.6.1",
+    "axios@^0.21.1": "0.35.0",
+    "lodash@4.17.21": "4.18.1",
+    "serialize-javascript@6.0.0": "7.1.4",
+    "tmp@0.0.33": "0.2.7",
+    "undici@^5.14.0": "6.29.1",
+    "node-gyp@latest": "11.5.0"
   },
   "publishConfig": {
     "access": "public",
