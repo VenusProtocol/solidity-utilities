@@ -1,3 +1,9 @@
+## [2.1.1-dev.1](https://github.com/VenusProtocol/solidity-utilities/compare/v2.1.0...v2.1.1-dev.1) (2026-11-12)
+
+### Bug Fixes
+
+* remove vulnerable release dependencies and require Node 20 ([c10d44e](https://github.com/VenusProtocol/solidity-utilities/commit/c10d44e65fb1b69fa5ff0e93342663b2bbdcd092))
+
 ## [2.1.0](https://github.com/VenusProtocol/solidity-utilities/compare/v2.0.3...v2.1.0) (2025-04-17)
 
 
