@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- NodeJS - 18.x
+- Node.js >= 20 (release automation uses Node.js 22.14.0 for semantic-release)
 
 - Solc - v0.8.13 (https://github.com/ethereum/solidity/releases/tag/v0.8.13)
 
